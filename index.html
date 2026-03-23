@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SwasthLink</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0; padding: 0;
+      background: #f5f7fa;
+      color: #333;
+    }
+    header {
+      background: #2a9d8f;
+      color: white;
+      text-align: center;
+      padding: 30px;
+    }
+    header h1 { margin: 0; font-size: 40px; }
+    header p { font-size: 18px; }
+    section {
+      padding: 30px;
+      max-width: 800px;
+      margin: auto;
+    }
+    .tagline {
+      font-size: 22px;
+      font-weight: bold;
+      color: #e76f51;
+      text-align: center;
+      margin: 20px 0;
+    }
+    .form-box {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    select, button {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      font-size: 16px;
+    }
+    button {
+      background: #2a9d8f;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover { background: #21867a; }
+    footer {
+      background: #264653;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>SwasthLink</h1>
+    <p>We connect indian to their doctors</p>
+  </header>
+
+  <section>
+    <div class="tagline">Stop waiting, break the line</div>
+    <div class="form-box">
+      <p>Use your city phone number and book your appointment</p>
+      <label>Select State:</label>
+      <select id="stateSelect" onchange="loadCities()">
+        <option value="">--Select State--</option>
+        <option>Uttar Pradesh</option>
+        <option>Maharashtra</option>
+        <option>Delhi</option>
+        <option>Karnataka</option>
+        <option>Tamil Nadu</option>
+         <option>Madhya Pradesh</option>
+        <option>Manipur</option>
+        <option>Gujrat</option>
+        <option>Uttrakhand</option>
+        <option>Himachal Pradesh</option>
+ <option>Punjab</option>
+        <option>Hariyana</option>
+        <option>Jammu</option>
+        <option>Kashmir</option>
+        <option>Kerla</option>
+ <option>West Bengal</option>
+        <option>Mizoram</option>
+        <option>Nagaland</option>
+        <option>Assam</option>
+        <option>Arunachal Pradesh</option>
+      </select>
+
+      <label>Select City:</label>
+      <select id="citySelect" onchange="showNumber()">
+        <option value="">--Select City--</option>
+      </select>
+
+      <p id="bookingNumber"></p>
+      <button onclick="openWhatsApp()">Book via WhatsApp</button>
+    </div>
+
+    <h3>Pharmacy List</h3>
+    <ul id="pharmacyList">
+      <!-- Populated dynamically -->
+    </ul>
+  </section>
+
+  <footer>
+    <p>Message fast, connect fast</p>
+  </footer>
+
+<script>
+  const data = {
+    "Uttar Pradesh": {
+      "Meerut": {number: "9876543210", pharmacies: ["HealthPlus Pharmacy - Delhi Road", "CityMed Store - Shastri Nagar"]},
+      "Lucknow": {number: "9123456780", pharmacies: ["CareWell Pharmacy - Hazratganj", "MediLink Store - Gomti Nagar"]}
+    },
+    "Delhi": {
+      "New Delhi": {number: "9988776655", pharmacies: ["Apollo Pharmacy - Connaught Place", "CityCare Store - Karol Bagh"]}
+    }
+    // Add more states/cities
+  };
+
+  function loadCities() {
+    const state = document.getElementById("stateSelect").value;
+    const citySelect = document.getElementById("citySelect");
+    citySelect.innerHTML = "<option value=''>--Select City--</option>";
+    if(data[state]) {
+      Object.keys(data[state]).forEach(city => {
+        const opt = document.createElement("option");
+        opt.value = city; opt.textContent = city;
+        citySelect.appendChild(opt);
+      });
+    }
+  }
+
+  function showNumber() {
+    const state = document.getElementById("stateSelect").value;
+    const city = document.getElementById("citySelect").value;
+    const info = data[state]?.[city];
+    const booking = document.getElementById("bookingNumber");
+    const pharmacyList = document.getElementById("pharmacyList");
+    pharmacyList.innerHTML = "";
+    if(info) {
+      booking.textContent = "Booking Number: " + info.number;
+      info.pharmacies.forEach(ph => {
+        const li = document.createElement("li");
+        li.textContent = ph;
+        pharmacyList.appendChild(li);
+      });
+    } else {
+      booking.textContent = "";
+    }
+  }
+
+  function openWhatsApp() {
+    const state = document.getElementById("stateSelect").value;
+    const city = document.getElementById("citySelect").value;
+    const info = data[state]?.[city];
+    if(info) {
+      const url = "https://wa.me/91" + info.number + "?text=Hello, I want to book an appointment.";
+      window.open(url, "_blank");
+    } else {
+      alert("Please select state and city first.");
+    }
+  }
+</script>
+</body>
+</html>
