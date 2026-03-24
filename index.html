@@ -61,7 +61,7 @@
 <body>
   <header>
     <h1>SwasthLink</h1>
- <p>Here you are make a appointment with a message</p>
+    <p>Here you can make an appointment with a message</p>
   </header>
 
   <section>
@@ -71,34 +71,37 @@
       <label>Select State:</label>
       <select id="stateSelect" onchange="loadCities()">
         <option value="">--Select State--</option>
-        <option>Uttar Pradesh</option>
-        <option>Maharashtra</option>
-        <option>Delhi</option>
-        <option>Karnataka</option>
-        <option>Tamil Nadu</option>
-         <option>Madhya Pradesh</option>
-        <option>Manipur</option>
-        <option>Gujrat</option>
-        <option>Uttrakhand</option>
+        <option>Andhra Pradesh</option>
+        <option>Arunachal Pradesh</option>
+        <option>Assam</option>
+        <option>Bihar</option>
+        <option>Chhattisgarh</option>
+        <option>Goa</option>
+        <option>Gujarat</option>
+        <option>Haryana</option>
         <option>Himachal Pradesh</option>
- <option>Punjab</option>
-        <option>Hariyana</option>
-        <option>Jammu</option>
-        <option>Kashmir</option>
-        <option>Kerla</option>
- <option>West Bengal</option>
+        <option>Jharkhand</option>
+        <option>Karnataka</option>
+        <option>Kerala</option>
+        <option>Madhya Pradesh</option>
+        <option>Maharashtra</option>
+        <option>Manipur</option>
+        <option>Meghalaya</option>
         <option>Mizoram</option>
         <option>Nagaland</option>
-        <option>Assam</option>
-        <option>Arunachal Pradesh</option>
-<option>Bihar</option>
-<option>Meghalaya</option>
-<option>Telengana</option>
-<option>Odisha</option>
-<option>Andhra Pradesh</option>
-<option>Goa</option>
-<option>Rajasthan</option>
-<option>Tripura</option>
+        <option>Odisha</option>
+        <option>Punjab</option>
+        <option>Rajasthan</option>
+        <option>Sikkim</option>
+        <option>Tamil Nadu</option>
+        <option>Telangana</option>
+        <option>Tripura</option>
+        <option>Uttar Pradesh</option>
+        <option>Uttarakhand</option>
+        <option>West Bengal</option>
+        <option>Delhi</option>
+        <option>Jammu and Kashmir</option>
+        <option>Ladakh</option>
       </select>
 
       <label>Select City:</label>
@@ -122,119 +125,194 @@
 
 <script>
   const data = {
-    "Uttar Pradesh": {
-
-  "Agra": {"number":"9569759599",pharmacies:["LifeCare Pharmacy - Tajganj","Wellness Store - Fatehabad Road"]},
-  "Aligarh": {"number":"9569759599",pharmacies:["CityHealth Pharmacy - Center Point","Medico Store - Railway Road"]},
-  "Allahabad": {"number":"9569759599",pharmacies:["CareWell Pharmacy - Civil Lines","MediLink Store - Katra"]},
-  "Ambedkar Nagar": {"number":"9569759599",pharmacies:["HealthPlus Pharmacy - Akbarpur","CityMed Store - Tanda"]},
-  "Amethi": {"number":"9569759599",pharmacies:["CarePoint Pharmacy - Gauriganj","Medico Store - Musafirkhana"]},
-  "Amroha": {"number":"9569759599",pharmacies:["WellCare Pharmacy - Dhanaura","CityMed Store - Hasanpur"]},
-  "Auraiya": {"number":"9569759599",pharmacies:["HealthFirst Pharmacy - Dibiyapur","MedLink Store - Auraiya"]},
-  "Azamgarh": {"number":"9569759599",pharmacies:["CityHealth Pharmacy - Civil Lines","CareWell Store - Mubarakpur"]},
-  "Baghpat": {"number":"9569759599",pharmacies:["Wellness Pharmacy - Baraut","Medico Store - Baghpat"]},
-  "Bahraich": {"number":"9569759599",pharmacies:["HealthPlus Pharmacy - Kaiserganj","CityMed Store - Bahraich"]},
-  "Ballia": {"number":"9569759599",pharmacies:["CarePoint Pharmacy - Rasra","MedLink Store - Ballia"]},
-  "Balrampur": {"number":"9569759599",pharmacies:["WellCare Pharmacy - Tulsipur","CityMed Store - Balrampur"]},
-  "Banda": {"number":"9569759599",pharmacies:["HealthFirst Pharmacy - Naraini","Medico Store - Banda"]},
-  "Barabanki": {"number":"9569759599",pharmacies:["CityHealth Pharmacy - Civil Lines","CareWell Store - Fatehpur"]},
-  "Bareilly": {"number":"9569759599",pharmacies:["HealthPlus Pharmacy - Civil Lines","CityWell Store - Pilibhit Road"]},
-  "Basti": {"number":"9569759599",pharmacies:["CarePoint Pharmacy - Harraiya","Medico Store - Basti"]},
-  "Bhadohi": {"number":"9569759599",pharmacies:["WellCare Pharmacy - Gyanpur","CityMed Store - Bhadohi"]},
-  "Bijnor": {"number":"9569759599",pharmacies:["HealthFirst Pharmacy - Najibabad","MedLink Store - Bijnor"]},
-  "Bulandshahr": {"number":"9569759599",pharmacies:["CityHealth Pharmacy - Khurja","CareWell Store - Bulandshahr"]},
-  "Chandauli": {"number":"9569759599",pharmacies:["Wellness Pharmacy - Mughalsarai","Medico Store - Chandauli"]},
-  "Chitrakoot": {"number":"9569759599",pharmacies:["HealthPlus Pharmacy - Karwi","CityMed Store - Manikpur"]},
-  "Deoria": {"number":"9569759599",pharmacies:["CarePoint Pharmacy - Rudrapur","MedLink Store - Deoria"]},
-  "Etah": {"number":"9569759599",pharmacies:["WellCare Pharmacy - Jalesar","CityMed Store - Etah"]},
-  "Etawah": {"number":"9569759599",pharmacies:["HealthFirst Pharmacy - Jaswantnagar","Medico Store - Etawah"]},
-  "Faizabad": {"number":"9569759599",pharmacies:["CareWell Pharmacy - Civil Lines","MedLink Store - Chowk"]},
-  "Farrukhabad": {"number":"9569759599",pharmacies:["Wellness Pharmacy - Kaimganj","CityMed Store - Farrukhabad"]},
-  "Fatehpur": {"number":"9569759599",pharmacies:["HealthPlus Pharmacy - Bindki","Medico Store - Fatehpur"]},
-  "Firozabad": {"number":"9569759599",pharmacies:["WellCare Pharmacy - Sadar Bazar","Medico Store - Railway Road"]},
-  "Gautam Buddha Nagar": {"number":"9569759599",pharmacies:["UrbanHealth Pharmacy - Sector 18","CityMed Store - Sector 62"]},
-  "Ghaziabad": {"number":"9569759599",pharmacies:["HealthCare Pharmacy - Raj Nagar","MedLink Store - Indirapuram"]},
-  "Ghazipur": {"number":"9569759599",pharmacies:["CarePoint Pharmacy - Saidpur","CityMed Store - Ghazipur"]},
-  "Gonda": {"number":"9569759599",pharmacies:["WellCare Pharmacy - Colonelganj","Medico Store - Gonda"]},
-  "Gorakhpur": {"number":"9569759599",pharmacies:["WellCare Pharmacy - Golghar","MedLink Store - Civil Lines"]},
-  "Hamirpur": {"number":"9569759599",pharmacies:["HealthFirst Pharmacy - Rath","CityMed Store - Hamirpur"]},
-  "Hapur": {"number":"9569759599",pharmacies:["CareWell Pharmacy - Garhmukteshwar","Medico Store - Hapur"]},
-  "Hardoi": {"number":"9569759599",pharmacies:["Wellness Pharmacy - Shahabad","CityMed Store - Hardoi"]},
-  "Hathras": {"number":"9569759599",pharmacies:["HealthPlus Pharmacy - Sasni","Medico Store - Hathras"]},
-  "Jalaun": {"number":"9569759599",pharmacies:["CarePoint Pharmacy - Orai","CityMed Store - Jalaun"]},
-  "Jaunpur": {"number":"9569759599",pharmacies:["WellCare Pharmacy - Shahganj","Medico Store - Jaunpur"]},
-  "Jhansi": {"number":"9569759599",pharmacies:["CareWell Pharmacy - Sipri Bazar","Medico Store - Civil Lines"]},
-  "Kannauj": {"number":"9569759599",pharmacies:["HealthFirst Pharmacy - Chhibramau","CityMed Store - Kannauj"]},
-  "Kanpur Dehat": {"number":"9569759599",pharmacies:["Wellness Pharmacy - Akbarpur","Medico Store - Kanpur Dehat"]},
-  "Kanpur Nagar": {"number":"9569759599",pharmacies:["HealthFirst Pharmacy - Mall Road","CarePoint Store - Kidwai Nagar"]},
-  "Kasganj": {"number":"9569759599",pharmacies:["CityHealth Pharmacy - Soron","Medico Store - Kasganj"]},
-  "Kaushambi": {"number":"9569759599",pharmacies:["WellCare Pharmacy - Manjhanpur","CityMed Store - Kaushambi"]},
-  "Kushinagar": {"number":"9569759599",pharmacies:["HealthPlus Pharmacy - Padrauna","Medico Store - Kushinagar"]},
-  "Lakhimpur Kheri": {"number":"9569759599",pharmacies:["CarePoint Pharmacy - Gola","CityMed Store - Lakhimpur"]},
-  "Lalitpur": {"number":"9569759599",pharmacies:["WellCare Pharmacy - Talbehat","Medico Store - Lalitpur"]},
-  "Lucknow": {"number":"9569759599",pharmacies:["CareWell Pharmacy - Hazratganj","MediLink Store - Gomti Nagar"]},
-  "Mahoba": {"number":"9569759599",pharmacies:["HealthFirst Pharmacy - Charkhari","CityMed Store - Mahoba"]},
-  "Mahrajganj": {"number":"9569759599",pharmacies:["CarePoint Pharmacy - Nautanwa","Medico Store - Mahrajganj"]},
-  "Mainpuri": {"number":"9569759599",pharmacies:["WellCare Pharmacy - Bhogaon","CityMed Store - Mainpuri"]},
-  "Mathura": {"number":"9569759599",pharmacies:["Sacred Health Pharmacy - Krishna Nagar","CityMed Store - Vrindavan Road"]},
-  "Mirzapur": {"number":"9569759599",pharmacies:["CareWell Pharmacy - Civil Lines","MedLink Store - Mirzapur"]},
-  "Moradabad":{"number":"9569759599",
-pharmacies:["CityHealth Pharmacy - Budh Bazaar","CarePoint Store - Civil Lines"]},
-  "Muzaffarnagar": {"number":"9569759599",
-pharmacies: ["HealthPlus Pharmacy - Delhi Road", "CityMed Store - Shastri Nagar"]},
-      "Meerut": {number: "9876543210", 
-pharmacies: ["HealthPlus Pharmacy - Delhi Road", "CityMed Store - Shastri Nagar"]},
-      "Mau":{number:"9569759599",
-pharmacies:["Prakash Medical - Azamgarh moad"," Rudra Medical - Fatima Gate"]}
+    "Andhra Pradesh": {
+      "Visakhapatnam": {"number":"9569759599","pharmacies":["Apollo Pharmacy - Beach Road","MediCare Store - Dwaraka Nagar"]},
+      "Vijayawada": {"number":"9569759599","pharmacies":["HealthFirst Pharmacy - Governorpet","CityCare Store - Benz Circle"]},
+      "Hyderabad": {"number":"9569759599","pharmacies":["Wellness Pharmacy - Jubilee Hills","CityMed Store - Secunderabad"]},
+      "Tirupati": {"number":"9569759599","pharmacies":["CareWell Pharmacy - Renigunta","MediLink Store - Temple Town"]},
+      "Nellore": {"number":"9569759599","pharmacies":["HealthPlus Pharmacy - Nellore","Medico Store - New Town"]},
+      "Kakinada": {"number":"9569759599","pharmacies":["CarePoint Pharmacy - Old Town","CityMed Store - New Harbor"]}
     },
-      "New Delhi": {number: "9988776655", pharmacies: ["Apollo Pharmacy - Connaught Place", "CityCare Store - Karol Bagh"]}
-    }
-    // Add more states/cities
-  };
-
-  function loadCities() {
-    const state = document.getElementById("stateSelect").value;
-    const citySelect = document.getElementById("citySelect");
-    citySelect.innerHTML = "<option value=''>--Select City--</option>";
-    if(data[state]) {
-      Object.keys(data[state]).forEach(city => {
-        const opt = document.createElement("option");
-        opt.value = city; opt.textContent = city;
-        citySelect.appendChild(opt);
-      });
-    }
-  }
-
-  function showNumber() {
-    const state = document.getElementById("stateSelect").value;
-    const city = document.getElementById("citySelect").value;
-    const info = data[state]?.[city];
-    const booking = document.getElementById("bookingNumber");
-    const pharmacyList = document.getElementById("pharmacyList");
-    pharmacyList.innerHTML = "";
-    if(info) {
-      booking.textContent = "Booking Number: " + info.number;
-      info.pharmacies.forEach(ph => {
-        const li = document.createElement("li");
-        li.textContent = ph;
-        pharmacyList.appendChild(li);
-      });
-    } else {
-      booking.textContent = "";
-    }
-  }
-
-  function openWhatsApp() {
-    const state = document.getElementById("stateSelect").value;
-    const city = document.getElementById("citySelect").value;
-    const info = data[state]?.[city];
-    if(info) {
-      const url = "https://wa.me/91" + info.number + "?text=Hello, I want to book an appointment.";
-      window.open(url, "_blank");
-    } else {
-      alert("Please select state and city first.");
-    }
-  }
-</script>
-</body>
-</html>
+    "Arunachal Pradesh": {
+      "Itanagar": {"number":"9569759599","pharmacies":["Apollo Pharmacy - Pappu Nagar","MediCare Store - Arunachal Road"]},
+      "Naharlagun": {"number":"9569759599","pharmacies":["HealthFirst Pharmacy - Naharlagun","CityCare Store - Main Road"]},
+      "Pasighat": {"number":"9569759599","pharmacies":["Wellness Pharmacy - Pasighat","CityMed Store - Siang Road"]}
+    },
+    "Assam": {
+      "Guwahati": {"number":"9569759599","pharmacies":["Apollo Pharmacy - GS Road","MediCare Store - Fancy Bazar"]},
+      "Assam": {"number":"9569759599","pharmacies":["HealthFirst Pharmacy - Pan Bazaar","CityCare Store - Noonmati"]},
+      "Dibrugarh": {"number":"9569759599","pharmacies":["Wellness Pharmacy - Marwari Patty","CityMed Store - Dibrugarh"]},
+      "Silchar": {"number":"9569759599","pharmacies":["CareWell Pharmacy - Silchar","MediLink Store - Amingaon"]}
+    },
+    "Bihar": {
+      "Patna": {"number":"9569759599","pharmacies":["Apollo Pharmacy - Boring Road","MediCare Store - Rajendra Nagar"]},
+      "Gaya": {"number":"9569759599","pharmacies":["HealthFirst Pharmacy - Gaya","CityCare Store - Wazirganj"]},
+      "Bhagalpur": {"number":"9569759599","pharmacies":["Wellness Pharmacy - Bhagalpur","CityMed Store - Sultanganj"]},
+      "Muzaffarpur": {"number":"9569759599","pharmacies":["CareWell Pharmacy - Muzaffarpur","MediLink Store - Gandhi Nagar"]},
+      "Darbhanga": {"number":"9569759599","pharmacies":["HealthPlus Pharmacy - Darbhanga","Medico Store - Adarsh Nagar"]},
+      "Madhubani": {"number":"9569759599","pharmacies":["CarePoint Pharmacy - Madhubani","CityMed Store - Janakinagar"]}
+    },
+    "Chhattisgarh": {
+      "Raipur": {"number":"9569759599","pharmacies":["Apollo Pharmacy - Pandri","MediCare Store - Civil Lines"]},
+      "Bilaspur": {"number":"9569759599","pharmacies":["HealthFirst Pharmacy - Bilaspur","CityCare Store - Sharda Nagar"]},
+      "Durg": {"number":"9569759599","pharmacies":["Wellness Pharmacy - Durg","CityMed Store - Bhilai"]},
+      "Rajnandgaon": {"number":"9569759599","pharmacies":["CareWell Pharmacy - Rajnandgaon","MediLink Store - Station Road"]}
+    },
+    "Goa": {
+      "Panaji": {"number":"9569759599","pharmacies":["Apollo Pharmacy - Panaji","MediCare Store - Fontainhas"]},
+      "Margao": {"number":"9569759599","pharmacies":["HealthFirst Pharmacy - Margao","CityCare Store - Old Town"]},
+      "Vasco da Gama": {"number":"9569759599","pharmacies":["Wellness Pharmacy - Vasco","CityMed Store - Port Road"]}
+    },
+    "Gujarat": {
+      "Ahmedabad": {"number":"9569759599","pharmacies":["Apollo Pharmacy - CG Road","MediCare Store - Navrangpura"]},
+      "Surat": {"number":"9569759599","pharmacies":["HealthFirst Pharmacy - Ring Road","CityCare Store - Athwalines"]},
+      "Vadodara": {"number":"9569759599","pharmacies":["Wellness Pharmacy - Fatehgunj","CityMed Store - Alkapuri"]},
+      "Rajkot": {"number":"9569759599","pharmacies":["CareWell Pharmacy - Rajkot","MediLink Store - Jubilee Garden"]},
+      "Gandhinagar": {"number":"9569759599","pharmacies":["HealthPlus Pharmacy - Gandhinagar","Medico Store - Sector 7"]},
+      "Bhavnagar": {"number":"9569759599","pharmacies":["CarePoint Pharmacy - Bhavnagar","CityMed Store - Near Takhteshwar"]}
+    },
+    "Haryana": {
+      "Chandigarh": {"number":"9569759599","pharmacies":["Apollo Pharmacy - Sector 17","MediCare Store - Sector 35"]},
+      "Faridabad": {"number":"9569759599","pharmacies":["HealthFirst Pharmacy - Clock Tower","CityCare Store - Nehru Nagar"]},
+      "Gurgaon": {"number":"9569759599","pharmacies":["Wellness Pharmacy - MG Road","CityMed Store - Sector 14"]},
+      "Hisar": {"number":"9569759599","pharmacies":["CareWell Pharmacy - Hisar","MediLink Store - Panipat Road"]},
+      "Rohtak": {"number":"9569759599","pharmacies":["HealthPlus Pharmacy - Rohtak","Medico Store - New City"]}
+    },
+    "Himachal Pradesh": {
+      "Shimla": {"number":"9569759599","pharmacies":["Apollo Pharmacy - The Mall","MediCare Store - Lakkar Bazar"]},
+      "Mandi": {"number":"9569759599","pharmacies":["HealthFirst Pharmacy - Mandi","CityCare Store - Old Town"]},
+      "Solan": {"number":"9569759599","pharmacies":["Wellness Pharmacy - Solan","CityMed Store - Nalagarh Road"]},
+      "Kangra": {"number":"9569759599","pharmacies":["CareWell Pharmacy - Kangra","MediLink Store - Dharamshala"]}
+    },
+    "Jharkhand": {
+      "Ranchi": {"number":"9569759599","pharmacies":["Apollo Pharmacy - Ranchi","MediCare Store - Lalpur"]},
+      "Dhanbad": {"number":"9569759599","pharmacies":["HealthFirst Pharmacy - Dhanbad","CityCare Store - Ullidih"]},
+      "Giridih": {"number":"9569759599","pharmacies":["Wellness Pharmacy - Giridih","CityMed Store - Court Road"]},
+      "Jamshedpur": {"number":"9569759599","pharmacies":["CareWell Pharmacy - Bistupur","MediLink Store - Sakchi"]}
+    },
+    "Karnataka": {
+      "Bangalore": {"number":"9569759599","pharmacies":["Apollo Pharmacy - Indiranagar","MediCare Store - Koramangala"]},
+      "Mysore": {"number":"9569759599","pharmacies":["HealthFirst Pharmacy - Mysore","CityCare Store - Devaraja Market"]},
+      "Mangalore": {"number":"9569759599","pharmacies":["Wellness Pharmacy - Mangalore","CityMed Store - Lalbagh"]},
+      "Belgaum": {"number":"9569759599","pharmacies":["CareWell Pharmacy - Belgaum","MediLink Store - Somwar Peth"]},
+      "Hubli": {"number":"9569759599","pharmacies":["HealthPlus Pharmacy - Hubli","Medico Store - Unkal"]},
+      "Kolar": {"number":"9569759599","pharmacies":["CarePoint Pharmacy - Kolar","CityMed Store - Main Road"]}
+    },
+    "Kerala": {
+      "Kochi": {"number":"9569759599","pharmacies":["Apollo Pharmacy - Fort Kochi","MediCare Store - Panampilly Nagar"]},
+      "Thiruvananthapuram": {"number":"9569759599","pharmacies":["HealthFirst Pharmacy - Thiruvananthapuram","CityCare Store - Medical College"]},
+      "Kozhikode": {"number":"9569759599","pharmacies":["Wellness Pharmacy - Kozhikode","CityMed Store - Mavoor Road"]},
+      "Kottayam": {"number":"9569759599","pharmacies":["CareWell Pharmacy - Kottayam","MediLink Store - Main Road"]},
+      "Alappuzha": {"number":"9569759599","pharmacies":["HealthPlus Pharmacy - Alappuzha","Medico Store - Boat Jetty"]},
+      "Thrissur": {"number":"9569759599","pharmacies":["CarePoint Pharmacy - Thrissur","CityMed Store - Town Center"]}
+    },
+    "Madhya Pradesh": {
+      "Bhopal": {"number":"9569759599","pharmacies":["Apollo Pharmacy - MP Nagar","MediCare Store - Arera Colony"]},
+      "Indore": {"number":"9569759599","pharmacies":["HealthFirst Pharmacy - Rajwada","CityCare Store - Khajrana"]},
+      "Gwalior": {"number":"9569759599","pharmacies":["Wellness Pharmacy - Gwalior","CityMed Store - City Center"]},
+      "Jabalpur": {"number":"9569759599","pharmacies":["CareWell Pharmacy - Jabalpur","MediLink Store - Civil Lines"]},
+      "Ujjain": {"number":"9569759599","pharmacies":["HealthPlus Pharmacy - Ujjain","Medico Store - Chhatri Bazar"]},
+      "Satna": {"number":"9569759599","pharmacies":["CarePoint Pharmacy - Satna","CityMed Store - Old Town"]}
+    },
+    "Maharashtra": {
+      "Mumbai": {"number":"9569759599","pharmacies":["Apollo Pharmacy - Bandra","MediCare Store - Fort"]},
+      "Pune": {"number":"9569759599","pharmacies":["HealthFirst Pharmacy - Camp","CityCare Store - Kalyani Nagar"]},
+      "Nagpur": {"number":"9569759599","pharmacies":["Wellness Pharmacy - Sitabuldi","CityMed Store - Ramdaspeth"]},
+      "Aurangabad": {"number":"9569759599","pharmacies":["CareWell Pharmacy - Aurangabad","MediLink Store - Paithan Road"]},
+      "Nashik": {"number":"9569759599","pharmacies":["HealthPlus Pharmacy - Nashik","Medico Store - Old Nashik"]},
+      "Akola": {"number":"9569759599","pharmacies":["CarePoint Pharmacy - Akola","CityMed Store - Town Hall"]},
+      "Kolhapur": {"number":"9569759599","pharmacies":["Apollo Pharmacy - Kolhapur","MediCare Store - Ravivar Peth"]},
+      "Satara": {"number":"9569759599","pharmacies":["Wellness Pharmacy - Satara","CityMed Store - Mandai Road"]}
+    },
+    "Manipur": {
+      "Imphal": {"number":"9569759599","pharmacies":["Apollo Pharmacy - Imphal","MediCare Store - Thangal Bazar"]},
+      "Thoubal": {"number":"9569759599","pharmacies":["HealthFirst Pharmacy - Thoubal","CityCare Store - Main Road"]},
+      "Ukhrul": {"number":"9569759599","pharmacies":["Wellness Pharmacy - Ukhrul","CityMed Store - Town Center"]}
+    },
+    "Meghalaya": {
+      "Shillong": {"number":"9569759599","pharmacies":["Apollo Pharmacy - Shillong","MediCare Store - Police Bazar"]},
+      "Tura": {"number":"9569759599","pharmacies":["HealthFirst Pharmacy - Tura","CityCare Store - Garo Hills"]},
+      "Cherrapunji": {"number":"9569759599","pharmacies":["Wellness Pharmacy - Cherrapunji","CityMed Store - Rainfall Town"]}
+    },
+    "Mizoram": {
+      "Aizawl": {"number":"9569759599","pharmacies":["Apollo Pharmacy - Aizawl","MediCare Store - Lammual"]},
+      "Lunglei": {"number":"9569759599","pharmacies":["HealthFirst Pharmacy - Lunglei","CityCare Store - Town Center"]},
+      "Saiha": {"number":"9569759599","pharmacies":["Wellness Pharmacy - Saiha","CityMed Store - New Town"]}
+    },
+    "Nagaland": {
+      "Kohima": {"number":"9569759599","pharmacies":["Apollo Pharmacy - Kohima","MediCare Store - Kezha Putu"]},
+      "Dimapur": {"number":"9569759599","pharmacies":["HealthFirst Pharmacy - Dimapur","CityCare Store - Town Center"]},
+      "Mon": {"number":"9569759599","pharmacies":["Wellness Pharmacy - Mon","CityMed Store - Main Road"]}
+    },
+    "Odisha": {
+      "Bhubaneswar": {"number":"9569759599","pharmacies":["Apollo Pharmacy - Nayapalli","MediCare Store - Saheed Nagar"]},
+      "Cuttack": {"number":"9569759599","pharmacies":["HealthFirst Pharmacy - Cuttack","CityCare Store - Badambadi"]},
+      "Rourkela": {"number":"9569759599","pharmacies":["Wellness Pharmacy - Rourkela","CityMed Store - Steel City"]},
+      "Sambalpur": {"number":"9569759599","pharmacies":["CareWell Pharmacy - Sambalpur","MediLink Store - Dhankauda Road"]}
+    },
+    "Punjab": {
+      "Chandigarh": {"number":"9569759599","pharmacies":["Apollo Pharmacy - Sector 17","MediCare Store - Sector 35"]},
+      "Ludhiana": {"number":"9569759599","pharmacies":["HealthFirst Pharmacy - Ludhiana","CityCare Store - Jalandhar Road"]},
+      "Amritsar": {"number":"9569759599","pharmacies":["Wellness Pharmacy - Amritsar","CityMed Store - Hall Bazaar"]},
+      "Patiala": {"number":"9569759599","pharmacies":["CareWell Pharmacy - Patiala","MediLink Store - New Town"]},
+      "Bathinda": {"number":"9569759599","pharmacies":["HealthPlus Pharmacy - Bathinda","Medico Store - City Center"]},
+      "Jalandhar": {"number":"9569759599","pharmacies":["CarePoint Pharmacy - Jalandhar","CityMed Store - Civil Lines"]}
+    },
+    "Rajasthan": {
+      "Jaipur": {"number":"9569759599","pharmacies":["Apollo Pharmacy - MI Road","MediCare Store - Raja Park"]},
+      "Jodhpur": {"number":"9569759599","pharmacies":["HealthFirst Pharmacy - Jodhpur","CityCare Store - Clock Tower"]},
+      "Udaipur": {"number":"9569759599","pharmacies":["Wellness Pharmacy - Udaipur","CityMed Store - Lake Road"]},
+      "Kota": {"number":"9569759599","pharmacies":["CareWell Pharmacy - Kota","MediLink Store - Nayapura"]},
+      "Bikaner": {"number":"9569759599","pharmacies":["HealthPlus Pharmacy - Bikaner","Medico Store - Bani Park"]},
+      "Ajmer": {"number":"9569759599","pharmacies":["CarePoint Pharmacy - Ajmer","CityMed Store - Daulat Gunj"]}
+    },
+    "Sikkim": {
+      "Gangtok": {"number":"9569759599","pharmacies":["Apollo Pharmacy - Gangtok","MediCare Store - MG Marg"]},
+      "Namchi": {"number":"9569759599","pharmacies":["HealthFirst Pharmacy - Namchi","CityCare Store - Town Center"]},
+      "Pelling": {"number":"9569759599","pharmacies":["Wellness Pharmacy - Pelling","CityMed Store - Main Road"]}
+    },
+    "Tamil Nadu": {
+      "Chennai": {"number":"9569759599","pharmacies":["Apollo Pharmacy - Teynampet","MediCare Store - Egmore"]},
+      "Coimbatore": {"number":"9569759599","pharmacies":["HealthFirst Pharmacy - Coimbatore","CityCare Store - Town Hall Road"]},
+      "Madurai": {"number":"9569759599","pharmacies":["Wellness Pharmacy - Madurai","CityMed Store - Chithirai Street"]},
+      "Salem": {"number":"9569759599","pharmacies":["CareWell Pharmacy - Salem","MediLink Store - New Siddharthanagar"]},
+      "Tiruchirappalli": {"number":"9569759599","pharmacies":["HealthPlus Pharmacy - Trichy","Medico Store - Fort Area"]},
+      "Tirunelveli": {"number":"9569759599","pharmacies":["CarePoint Pharmacy - Tirunelveli","CityMed Store - Nagercoil"]}
+    },
+    "Telangana": {
+      "Hyderabad": {"number":"9569759599","pharmacies":["Apollo Pharmacy - Jubilee Hills","MediCare Store - Secunderabad"]},
+      "Warangal": {"number":"9569759599","pharmacies":["HealthFirst Pharmacy - Warangal","CityCare Store - Town Hall"]},
+      "Vijayawada": {"number":"9569759599","pharmacies":["Wellness Pharmacy - Vijayawada","CityMed Store - Benz Circle"]},
+      "Nizamabad": {"number":"9569759599","pharmacies":["CareWell Pharmacy - Nizamabad","MediLink Store - Jail Road"]}
+    },
+    "Tripura": {
+      "Agartala": {"number":"9569759599","pharmacies":["Apollo Pharmacy - Agartala","MediCare Store - Akhaura Road"]},
+      "Udaipur": {"number":"9569759599","pharmacies":["HealthFirst Pharmacy - Udaipur","CityCare Store - Town Center"]},
+      "Ambassa": {"number":"9569759599","pharmacies":["Wellness Pharmacy - Ambassa","CityMed Store - Main Road"]}
+    },
+    "Uttar Pradesh": {
+      "Lucknow": {"number":"9569759599","pharmacies":["Apollo Pharmacy - Hazratganj","MediCare Store - Gomti Nagar"]},
+      "Kanpur": {"number":"9569759599","pharmacies":["HealthFirst Pharmacy - Kanpur","CityCare Store - Govind Nagar"]},
+      "Agra": {"number":"9569759599","pharmacies":["Wellness Pharmacy - Tajganj","CityMed Store - Fatehabad Road"]},
+      "Varanasi": {"number":"9569759599","pharmacies":["CareWell Pharmacy - Varanasi","MediLink Store - Assi Ghat"]},
+      "Meerut": {"number":"9569759599","pharmacies":["HealthPlus Pharmacy - Delhi Road","Medico Store - Shastri Nagar"]},
+      "Ghaziabad": {"number":"9569759599","pharmacies":["CarePoint Pharmacy - Raj Nagar","CityMed Store - Indirapuram"]},
+      "Aligarh": {"number":"9569759599","pharmacies":["Apollo Pharmacy - Center Point","MediCare Store - Railway Road"]},
+      "Bareilly": {"number":"9569759599","pharmacies":["HealthFirst Pharmacy - Civil Lines","CityCare Store - Pilibhit Road"]},
+      "Moradabad": {"number":"9569759599","pharmacies":["Wellness Pharmacy - Budh Bazaar","CityMed Store - Civil Lines"]},
+      "Mathura": {"number":"9569759599","pharmacies":["CareWell Pharmacy - Krishna Nagar","MediLink Store - Vrindavan Road"]},
+      "Allahabad": {"number":"9569759599","pharmacies":["HealthPlus Pharmacy - Civil Lines","Medico Store - Katra"]},
+      "Gorakhpur": {"number":"9569759599","pharmacies":["CarePoint Pharmacy - Golghar","CityMed Store - Civil Lines"]},
+      "Firozabad": {"number":"9569759599","pharmacies":["Apollo Pharmacy - Sadar Bazar","MediCare Store - Railway Road"]},
+      "Etawah": {"number":"9569759599","pharmacies":["Wellness Pharmacy - Jaswantnagar","CityMed Store - Etawah"]}
+    },
+    "Uttarakhand": {
+      "Dehradun": {"number":"9569759599","pharmacies":["Apollo Pharmacy - Dehradun","MediCare Store - Paltan Bazar"]},
+      "Nainital": {"number":"9569759599","pharmacies":["HealthFirst Pharmacy - Nainital","CityCare Store - Mall Road"]},
+      "Haridwar": {"number":"9569759599","pharmacies":["Wellness Pharmacy - Haridwar","CityMed Store - Hari Nagar"]},
+      "Rishikesh": {"number":"9569759599","pharmacies":["CareWell Pharmacy - Rishikesh","MediLink Store - Laxman Jhula"]}
+    },
+    "West Bengal": {
+      "Kolkata": {"number":"9569759599","pharmacies":["Apollo Pharmacy - Alipore","MediCare Store - Ballygunge"]},
+      "Howrah": {"number":"9569759599","pharmacies":["HealthFirst Pharmacy - Howrah","CityCare Store - Ghusuri"]},
+      "Durgapur": {"number":"9569759599","pharmacies"
